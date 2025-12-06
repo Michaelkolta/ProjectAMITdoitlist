@@ -1,97 +1,111 @@
-📌 DOIT LIST – Android Automation Framework
-Appium | TestNG | Cucumber | POM | Android Studio | Appium Inspector | Allure
+# 📌 DOIT LIST – Android Automation Framework
+### *Appium | TestNG | Cucumber | POM | Android Studio | Appium Inspector | Allure*
 
-This repository contains a complete mobile automation testing framework for the DOIT LIST Android application.
-The project is designed to help QA engineers—especially beginners—learn real Android automation using modern industry tools and best practices.
+This repository contains a complete **mobile automation testing framework** for the **DOIT LIST** Android application.  
+The project is designed to help **QA engineers—especially beginners—learn real Android automation** using modern industry tools and best practices.
 
-🎯 Project Purpose
+---
+
+## 🎯 Project Purpose
 
 The goal of this project is to provide a practical, scalable, and easy-to-understand automation framework that teaches:
 
-How to automate real Android apps with Appium
+- How to automate real Android apps using **Appium**
+- How to structure tests with **Page Object Model (POM)**
+- How to execute tests using **TestNG**
+- How to design BDD tests using **Cucumber**
+- How to inspect elements using **Appium Inspector**
+- How to generate visual test results using **Allure Reports**
 
-How to structure tests using Page Object Model (POM)
+This project is perfect for beginners moving toward mid-level mobile automation skills.
 
-How to run tests using TestNG
+---
 
-How to write BDD tests using Cucumber (Gherkin)
+## 🧪 Automated Test Scenarios
 
-How to inspect elements using Appium Inspector
+The framework contains **five key real-world scenarios**:
 
-How to view professional test results using Allure Reports
+### **Scenario 1 — Add a New Task**
+Verify that the user can create a new task with title and description.
 
-This framework is ideal for beginners advancing toward mid-level mobile automation skills.
+### **Scenario 2 — Edit an Existing Task**
+Ensure that the user can update an existing task.
 
-🧪 Automated Test Scenarios
+### **Scenario 3 — Delete a Task**
+Validate that the user can delete a task from the list.
 
-This project covers five essential real-world mobile app test scenarios:
+### **Scenario 4 — Mark a Task as Completed**
+Check that the user can mark a task as completed.
 
-Scenario 1 — Add a New Task
+### **Scenario 5 — Filter Completed Tasks**
+Verify that the user can filter and view only completed tasks.
 
-Verify that the user can create a new task with title & description.
+---
 
-Scenario 2 — Edit an Existing Task
+## 📂 Project Structure
 
-Ensure that task details can be updated successfully.
 
-Scenario 3 — Delete a Task
 
-Validate that the user can remove an existing task.
 
-Scenario 4 — Mark a Task as Completed
+## 📂 Project Structure
 
-Check that tasks can be marked as completed.
-
-Scenario 5 — Filter Completed Tasks
-
-Verify that the user can filter and view completed tasks only.
-
-📂 Project Structure
 DOIT-LIST-Automation/
 │
 ├── src/main/java/
-│   ├── Base/                 # Driver initialization & configuration
+│ ├── Base/ # Driver initialization & configuration
 │
 ├── src/test/java/
-│   ├── Tests/                # TestNG test classes
+│ ├── Tests/ # TestNG test classes
 │
-│── StepDefinitions/          # Cucumber step definitions
+│── StepDefinitions/ # Cucumber step definitions
 │
-│   ├── Hooks/                # Cucumber hooks for setup/teardown
+│ ├── Hooks/ # Cucumber hooks for setup/teardown
 │
-│   ├── LocalStepDef/         # Local step definitions (custom logic)
+│ ├── LocalStepDef/ # Local step definitions (custom logic)
 │
 ├── resources/
-│   └── capabilities.json     # Appium desired capabilities
+│ └── capabilities.json # Appium desired capabilities
 │
-├── Features/                 # Cucumber BDD .feature files
+├── Features/ # Cucumber BDD .feature files
 │
 └── README.md
 
-🚀 Tech Stack
-Technology	Description
-Java	Primary programming language
-Appium (UiAutomator2)	Android automation engine
-TestNG	Testing & assertions
-Cucumber (BDD)	Gherkin scenarios & step definitions
-Page Object Model (POM)	Scalable reusable framework pattern
-Android Studio	Emulator & debugging environment
-Appium Inspector	Locator inspection and validation
-Allure Reporting	Detailed & visual test results
-▶️ Running the Tests
-1️⃣ Install Requirements
 
-Java JDK 17+
 
-Android Studio + Emulator
 
-Appium Server CLI or Appium Desktop
+---
 
-Appium Inspector
+## 🚀 Tech Stack
 
-Maven
+| Tool / Technology | Purpose |
+|------------------|---------|
+| **Java** | Programming language |
+| **Appium (UiAutomator2)** | Mobile automation engine |
+| **TestNG** | Test execution and assertions |
+| **Cucumber (BDD)** | Gherkin scenarios & BDD style |
+| **Page Object Model** | Clean, scalable framework structure |
+| **Android Studio** | Emulator, SDK & app debugging |
+| **Appium Inspector** | Locator identification |
+| **Allure Reporting** | Advanced reporting & test visualization |
 
-Node.js
+---
+
+## 🛠️ Installation & Setup
+
+### **1️⃣ Install Dependencies**
+Make sure you have installed:
+
+- Java JDK 8+
+- Maven
+- Android Studio
+- Appium Server
+- Appium Inspector
+- Node.js (for Appium)
+
+Install Appium CLI:
+
+```bash
+npm install -g appium
 
 2️⃣ Start Appium Server
 appium
@@ -102,50 +116,69 @@ From Android Studio:
 
 Tools → Device Manager → Start Emulator
 
+▶️ Running Tests
 4️⃣ Run TestNG Tests
 mvn test
 
 5️⃣ Run Cucumber Tests
 mvn test -Dcucumber.filter.tags="@regression"
 
-📊 Allure Reporting
-Generate Allure Report:
+📊 Allure Report
+Generate report
 allure generate allure-results --clean -o allure-report
 
-Open Report:
+Open report
 allure open allure-report
 
 🧩 Sample Cucumber Feature
 Feature: Manage tasks in DOIT LIST
 
-Scenario: Add a new task
-Given the user is on the DOIT LIST home screen
-When the user adds a task with title "Read Book" and description "15 pages"
-Then the task should appear in the task list
+  Scenario: Add a new task
+    Given the user is on the DOIT LIST home screen
+    When the user adds a task with title "Read Book" and description "15 pages"
+    Then the task should appear in the task list
 
 ✨ Framework Highlights
 
 ✔ Beginner-friendly
-✔ Real Android App Automation
-✔ Clean POM structure
-✔ Supports both TestNG & Cucumber
-✔ Allure Reports integrated
-✔ Element inspection with Appium Inspector
-✔ Production-style folder structure
+✔ Real Android automation
+✔ Clean Page Object Model
+✔ Supports Both TestNG & Cucumber
+✔ Uses Appium Inspector for stable element locators
+✔ Integrated with Allure Reports
+✔ Covers CRUD task operations
+✔ Production-grade folder structure
 
 🤝 Contributions
 
 Contributions are welcome!
-You can contribute by:
+You can help by adding:
 
-Adding more scenarios
+More test scenarios
 
-Improving POM design
+Advanced gestures (swipe, scroll, long press)
 
-Enhancing Cucumber steps
+CI/CD pipelines
 
-Adding CI/CD pipeline
+Additional Allure customizations
 
 📄 License
 
-This project is released under the MIT License.
+This project is open-source under the MIT License.
+
+Happy Testing! 🚀
+For questions or contributions, feel free to open an issue or pull request.
+
+
+---
+
+If you'd like, I can also:
+
+✅ Add badges (Maven, Appium, Allure, Android)  
+✅ Add screenshots of the emulator/tests  
+✅ Add a table of contents  
+✅ Improve professional styling  
+
+Just tell me!
+
+
