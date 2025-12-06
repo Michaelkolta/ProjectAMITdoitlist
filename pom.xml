@@ -78,6 +78,8 @@
         </dependency>
 
 
+
+
         <!-- SLF4J (to avoid warning logs from Appium) -->
         <dependency>
             <groupId>org.slf4j</groupId>
