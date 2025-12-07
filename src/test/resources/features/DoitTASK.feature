@@ -47,3 +47,13 @@ Feature:  Add a New Task
   Scenario: Filtering Completed Tasks
     When User Click on the widget Button dropdown
     Then User click on completed Task
+
+  #Scenario 6: Verify App Behavior After Screen Rotation
+  @ScreenRotation
+  Scenario: Screen Rotation Behavior
+  When user add new Task
+  And Add user Title Field
+  And Add user Description Field
+  And Save Button
+  And User Rotate from PORTRAIT to LANDSCAPE
+  Then User Rotate again from LANDSCAPE to PORTRAIT

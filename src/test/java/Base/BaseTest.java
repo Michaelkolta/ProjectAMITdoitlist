@@ -23,6 +23,7 @@ public class BaseTest {
         DesiredCapabilities caps = new DesiredCapabilities();
         caps.setCapability("platformName", "Android");
         caps.setCapability("appium:automationName", "UiAutomator2");
+        caps.setCapability("appium:orientation", "PORTRAIT");
         caps.setCapability("appium:deviceName", "emulator-5554");
         caps.setCapability("appium:appPackage", "com.example.android.architecture.blueprints.main");
         caps.setCapability("appium:appActivity",

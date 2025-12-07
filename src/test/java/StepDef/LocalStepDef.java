@@ -12,6 +12,7 @@ EditExistingTask editExistingTask;
 AutomateFilteringCompletedTasks automateFilteringCompletedTasks;
 DeleteTask deleteTask;
 MarkTaskComplete markTaskComplete;
+ScreenRotationTask screenRotationTask;
 
 
 @When("user add new Task")
@@ -102,5 +103,18 @@ editExistingTask.Savebutton();
     public void User_click_on_completed_Task(){
     automateFilteringCompletedTasks.CompleteButton();
 }
+
+@And("User Rotate from PORTRAIT to LANDSCAPE")
+    public void User_Rotate_from_PORTRAIT_to_LANDSCAPE() throws InterruptedException {
+    screenRotationTask= new ScreenRotationTask();
+    screenRotationTask.RotateLandscape();
+}
+
+@Then("User Rotate again from LANDSCAPE to PORTRAIT")
+    public void User_Rotate_again_from_LANDSCAPE_to_PORTRAIT() throws InterruptedException {
+    screenRotationTask.RotatePortrait();
+}
+
+
 
 }
