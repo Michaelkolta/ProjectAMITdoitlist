@@ -13,10 +13,10 @@ public class UnderContinuousTask extends BaseTest {
             System.out.println("Adding task: " + i);
 
             // Example:
-            // clickAddButton();
-            // enterTaskTitle("Task " + i);
-            // enterTaskDescription("Description " + i);
-            // clickSaveButton();
+            // ClickAddButton();
+            // EnterTaskTitle("Task " + i);
+            // EnterTaskDescription("Description " + i);
+            // ClickSaveButton();
 
             // Simulate delay
             Thread.sleep(300);
