@@ -10,8 +10,8 @@ public class UnderContinuousTask extends BaseTest {
         long startTime = System.currentTimeMillis();  // Start timer
 
         for (int i = 1; i <= 50; i++) {
+            System.out.println("Adding task: " + i);
 
-            // ---- Add your real task steps here ----
             // Example:
             // clickAddButton();
             // enterTaskTitle("Task " + i);
