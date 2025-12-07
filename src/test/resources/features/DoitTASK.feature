@@ -57,3 +57,14 @@ Feature:  Add a New Task
   And Save Button
   And User Rotate from PORTRAIT to LANDSCAPE
   Then User Rotate again from LANDSCAPE to PORTRAIT
+
+  #Scenario 7: Verify App Performance Under Continuous Task Creation
+  @UnderLoadTask
+  Scenario: App Performance UnderLoad Task
+    When user add new Task
+    And Add user Title Field
+    And Add user Description Field
+    And Save Button
+    Then User a loop to add 50 plus tasks
+
+

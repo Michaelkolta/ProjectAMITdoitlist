@@ -13,6 +13,7 @@ AutomateFilteringCompletedTasks automateFilteringCompletedTasks;
 DeleteTask deleteTask;
 MarkTaskComplete markTaskComplete;
 ScreenRotationTask screenRotationTask;
+UnderContinuousTask underContinuousTask;
 
 
 @When("user add new Task")
@@ -115,6 +116,10 @@ editExistingTask.Savebutton();
     screenRotationTask.RotatePortrait();
 }
 
-
+@Then("User a loop to add 50 plus tasks")
+    public void User_a_loop_to_add_50_plus_tasks() throws Exception {
+    underContinuousTask=new UnderContinuousTask();
+    underContinuousTask.addTasksUnderLoad();
+}
 
 }
