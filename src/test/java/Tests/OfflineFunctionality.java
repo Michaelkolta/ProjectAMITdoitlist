@@ -4,11 +4,8 @@ import Base.BaseTest;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.connection.ConnectionStateBuilder;
 
-
 // Scenario 8: Validate Offline Functionality (if supported)
 public class OfflineFunctionality {
-
-
 
     public void TurnOffInternet () throws InterruptedException {
 
