@@ -43,7 +43,7 @@ Feature:  Add a New Task
     Then Check the complete on checkbox
 
     #Scenario 5: Automate Filtering Completed Tasks
-@FilteringCompletedTask
+  @FilteringCompletedTask
   Scenario: Filtering Completed Tasks
     When User Click on the widget Button dropdown
     Then User click on completed Task

@@ -11,7 +11,7 @@ import io.cucumber.testng.CucumberOptions;
                 "io.qameta.allure.cucumber6jvm.AllureCucumber6Jvm"
         },
         monochrome = true,
-        tags = "@AddNewTask"        // Add your tag here (@Login, @Smoke...)
+        tags = "@OfflineFunctionality"        // Add your tag here (@Login, @Smoke...)
 )
 public class TestNGRunner extends AbstractTestNGCucumberTests {
 
