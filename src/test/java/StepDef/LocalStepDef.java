@@ -14,6 +14,7 @@ DeleteTask deleteTask;
 MarkTaskComplete markTaskComplete;
 ScreenRotationTask screenRotationTask;
 UnderContinuousTask underContinuousTask;
+OfflineFunctionality offlineFunctionality;
 
 
 @When("user add new Task")
@@ -120,6 +121,17 @@ editExistingTask.Savebutton();
     public void User_a_loop_to_add_50_plus_tasks() throws Exception {
     underContinuousTask=new UnderContinuousTask();
     underContinuousTask.addTasksUnderLoad();
+}
+
+@When("User Turnoff the Network")
+    public void User_Turnoff_the_Network () throws InterruptedException {
+    offlineFunctionality=new OfflineFunctionality();
+    offlineFunctionality.TurnOffInternet();
+
+}
+@Then("User TurnOn the Network")
+    public void User_TurnOn_the_Network() throws InterruptedException {
+    offlineFunctionality.TurnOnInternet();
 }
 
 }

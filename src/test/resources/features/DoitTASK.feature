@@ -67,4 +67,14 @@ Feature:  Add a New Task
     And Save Button
     Then User a loop to add 50 plus tasks
 
+  # Scenario 8: Validate Offline Functionality (if supported)
+  @OfflineFunctionality
+  Scenario: Offline Functionality support
+    When User Turnoff the Network
+    And user add new Task
+    And Add user Title Field
+    And Add user Description Field
+    And Save Button
+    Then User TurnOn the Network
+
 

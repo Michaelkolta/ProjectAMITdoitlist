@@ -14,7 +14,7 @@ import java.time.Duration;
 
 public class BaseTest {
 
-    protected static AppiumDriver driver;
+    public static AppiumDriver driver;
     protected static WebDriverWait wait;
 
     // -------- Start Driver ----------
